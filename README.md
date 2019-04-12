@@ -20,7 +20,8 @@ the price that an institution is willing to buy and an offer is the price that a
    - N/U/D : whether this is a new quote or an update or delete for a prev received quote. A quote update can either
              volume or price or both. A delete for a quote ide of "0" will delete the entire bok. 0/B/D/0/0 will delete
              the entire bid book and 0/A/D/0/0 will delete the entire offer book.
-   - Price price associated with this quote
+   - Price price associated with this quote. Max Price is 655.35$ ( Max for uint16_t which is what price array based out of ).
+     This can be easily increased to uint32_t for example if your system has enough memory ( Not in my windows pc ).
    - Volume volume associated with this quote
    
    1) Build the order book using the solution csvProject.sln
